@@ -113,6 +113,7 @@ $SUDO docker run \
     --security-opt seccomp:unconfined \
     -v /sys/fs/cgroup:/sys/fs/cgroup:ro \
     -v /lib/modules:/lib/modules:ro \
+    --shm-size 2g \
     -d $IMGNAME || clean_up
 
 # wait for snapd to start
